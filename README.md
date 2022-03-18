@@ -1,2 +1,2 @@
 # Proxter.pl
- HTTP/S - SOCKS4/5 Checker
+ HTTP/HTTPS/SOCKS4/SOCKS5 proxy testing script
