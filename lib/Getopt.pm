@@ -71,7 +71,7 @@ class Getopt is mutable {
         traits        => ['Getopt'],
         cmd_aliases   => ['g'],
         default       => 10,
-        documentation => 'Request giveup timeout per host in seconds.',
+        documentation => 'Request giveup timeout per host in seconds',
     );
     has retries => (
         is            => 'ro',
