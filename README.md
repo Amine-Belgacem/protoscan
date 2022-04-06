@@ -1,5 +1,5 @@
 # Proxter
-    Multithreaded proxy testing tool that supports HTTP/HTTPS & SOCKS4/5 proxies. 
+Multithreaded proxy testing tool that supports HTTP/HTTPS & SOCKS4/5 proxies. 
 
 ## Usage
 
