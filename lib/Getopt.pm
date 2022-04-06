@@ -11,7 +11,7 @@ class Getopt is mutable {
         isa           => 'Str',
         traits        => ['Getopt'],
         cmd_aliases   => ['i'],
-        default       => './proxies-in.txt',
+        default       => './proxies.txt',
         documentation => 'Path to input proxy file',
     );
     has output => (
@@ -19,7 +19,7 @@ class Getopt is mutable {
         isa           => 'Str',
         traits        => ['Getopt'],
         cmd_aliases   => ['o'],
-        default       => './proxies-out.txt',
+        default       => './output.txt',
         documentation => 'Path to output proxy file',
     );
     has json => (
@@ -62,7 +62,7 @@ class Getopt is mutable {
         isa           => 'Int',
         traits        => ['Getopt'],
         cmd_aliases   => ['t'],
-        default       => 5,
+        default       => 10,
         documentation => 'Number of worker threads to be used',
     );
     has giveup => (
