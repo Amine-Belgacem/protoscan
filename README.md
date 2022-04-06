@@ -1,2 +1,2 @@
 # Proxter
- HTTP/S & SOCKS4/5 Multithreaded proxy testing script.
+ HTTP/HTTPS/SOCKS4/SOCKS5 Multithreaded proxy testing script.
