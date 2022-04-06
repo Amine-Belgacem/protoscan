@@ -62,7 +62,7 @@ class Getopt is mutable {
         isa           => 'Int',
         traits        => ['Getopt'],
         cmd_aliases   => ['t'],
-        default       => 10,
+        default       => 5,
         documentation => 'Number of worker threads to be used',
     );
     has giveup => (
