@@ -292,7 +292,7 @@ sub socketConnect {
             PeerPort => $port,
             Timeout  => $timeout,
             Blocking => 0
-       );
+        );
 
         if (defined($socket)) {
             my $latency = int((time() - $startTime) * 1000);
@@ -522,7 +522,7 @@ sub process {
                 }
                 closeFile($fileHandle) if defined($fileHandle);
             }
-       );
+        );
     } 1 .. $threads;
 
     $_->join foreach (@threads);
@@ -544,7 +544,7 @@ sub probeHost {
         'isHttps'   => 0,
         'isSocks4'  => 0,
         'isSocks5'  => 0,
-   );
+    );
 
     my ($socket, $latency) = socketConnect($ip, $port, $timeout, $retries, 1);
 
@@ -575,7 +575,7 @@ sub getScanOptions {
         'https'   => 0,
         'socks4'  => 0,
         'socks5'  => 0,
-   );
+    );
 
     GetOptions(
         'proxy=s'       => \$proxy,
@@ -589,7 +589,7 @@ sub getScanOptions {
         'socks4!'       => \$options{'socks4'},
         'socks5!'       => \$options{'socks5'},
         'all!'          => \$allProtocols
-   ) or die $PROTOSCAN::usage;
+    ) or die $PROTOSCAN::usage;
 
     die("At least one of '-proxy' or '-proxy-file' must be specified.\n")
         unless (defined($proxy) || defined($proxyFile));
@@ -638,7 +638,7 @@ sub scan {
             $options{'https'}, 
             $options{'socks4'}, 
             $options{'socks5'}
-        );
+         );
         push(@tasks, \@task);
     }
 
@@ -685,7 +685,7 @@ sub scan {
             }
         },
         $options{'threads'}
-   );
+    );
 }
 
 # Fetch related subroutines:
@@ -718,7 +718,7 @@ sub getFetchOptions {
         'threads' => 1,
         'timeout' => 10,
         'limit'   => undef,
-   );
+    );
 
     GetOptions(
         'url=s'         => \$url,
@@ -727,7 +727,7 @@ sub getFetchOptions {
         'threads=i'     => \$options{'threads'},
         'timeout=i'     => \$options{'timeout'},
         'limit=i'       => \$options{'limit'},
-   ) or die $PROTOSCAN::usage;
+    ) or die $PROTOSCAN::usage;
 
     die("At least one of '-url' or '-url-file' must be specified.\n")
         unless (defined($url) || defined($urlFile));
@@ -785,7 +785,7 @@ sub fetch {
             printRow("-", shortenDomain(getDomainFromURL(@$task[0])), scalar(@result));
         },
         $options{'threads'}
-   );
+    );
 
     print "\n> Removing duplicates from file...\n";
     print "> " . removeDuplicatesFromFile($options{'outputFile'}) . " records removed.\n";
