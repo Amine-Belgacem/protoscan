@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use MooseX::Declare;
 
-class Proxter is mutable {
+class ProtoScan is mutable {
     use lib './lib';
     use Types qw(Proxies Timeout Exception Proxy);
     use Try::Tiny;
@@ -103,4 +103,4 @@ class Proxter is mutable {
     }
 }
 
-Proxter->new->run();
+ProtoScan->new->run();

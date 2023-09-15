@@ -1,9 +1,9 @@
-# Proxter
+# pCheck
 Multithreaded proxy testing tool that supports HTTP/HTTPS & SOCKS 4/5 proxies. 
 
 ## Usage
 
-    usage: proxter.pl [-45?ghijoprst] [long options...]
+    usage: pcheck.pl [-45?ghijoprst] [long options...]
     --help (or -?)         Prints this usage information.
                            aka --usage, -h
     --input STR (or -i)    Path to input proxy file
