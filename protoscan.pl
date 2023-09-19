@@ -796,11 +796,12 @@ sub fetch {
 # Gets main command and calls subroutine.
 sub getCommand {
     my $cmd      = shift;
-    my @commands = ('scan', 'fetch',);
+    my @commands = ('scan', 'fetch', 'help');
 
     if (defined $cmd && isInArray(\@commands, $cmd)) {
         scan()  if $cmd eq 'scan';
         fetch() if $cmd eq 'fetch';
+        print $PROTOSCAN::usage if $cmd eq 'help';
     } else {
         if (not defined $cmd) {
             die "Missing command, unable to continue.\n";
