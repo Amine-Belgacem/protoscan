@@ -1,6 +1,8 @@
 # Protoscan
 
-A Perl command-line tool for fetching proxy candidates and checking HTTP, HTTPS, SOCKS4, and SOCKS5 support.
+Protoscan helps you collect proxy candidates and determine which protocols their endpoints actually support. Its Perl command-line interface can fetch addresses from source URLs, scan individual proxies or files, and export results for later review.
+
+HTTP, HTTPS, SOCKS4, and SOCKS5 checks, latency measurements, and multithreaded processing make it useful for sorting an existing proxy list or preparing candidates for another networking workflow. The included samples show the expected input formats, and the object-oriented variant offers a separate implementation to study. Platform compatibility and country-lookup accuracy depend on the original implementation and supplied GeoIP data.
 
 ## What it does
 
